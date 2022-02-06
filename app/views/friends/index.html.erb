@@ -1,0 +1,49 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Friends</h1>
+
+<table class="table table-sm">
+<thead>
+<tr>
+  <th>First name</th>
+  <th>Last name</th>
+  <th>Email</th>
+  <th>Phone</th>
+  <th>Twitter</th>
+
+</tr>
+</thead>
+
+
+<tbody>
+<% @friends.each do |friend| %>
+
+    <tr>
+      <td>
+        <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
+
+
+      </td>
+
+      <td><%= friend.email %></td>
+      <td><%= friend.phone %></td>
+      <td><%= friend.twitter %></td>
+
+
+
+
+
+      <td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+
+    </tr>
+  <% end %>
+
+</tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Friend', new_friend_path, class:"btn btn-secondary" %>
+
+
+
