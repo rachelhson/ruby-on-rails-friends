@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Ruby-on-rails 
+The project is guided by https://www.youtube.com/watch?v=fmyvWz5TUWg&t=2573s
